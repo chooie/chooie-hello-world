@@ -1,0 +1,40 @@
+{
+  "name": "chooie-hello-world",
+  "version": "1.0.0",
+  "description": "My first npm package",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "watch 'npm run build' src",
+    "build": "babel src -d build",
+    "test": "jest src",
+    "test:watch": "npm test -- --watch src",
+    "prepublish": "npm run build",
+    "release": "np"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chooie/chooie-hello-world.git"
+  },
+  "keywords": [
+    "hello",
+    "world"
+  ],
+  "author": "Charles Hebert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chooie/chooie-hello-world/issues"
+  },
+  "homepage": "https://github.com/chooie/chooie-hello-world#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "jest": "^20.0.4",
+    "np": "^2.16.0",
+    "watch": "^1.0.2"
+  }
+}
